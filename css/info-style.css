@@ -46,7 +46,7 @@ body {
 
 .name-title {
     margin: 0;
-    color: var(--title);
+    color: #000;
     font-family: "Great Vibes", cursive;
     font-size: clamp(46px, 6vw, 68px);
     font-weight: 400;
