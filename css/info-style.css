@@ -1,0 +1,365 @@
+/* Página 2 — Convite */
+:root {
+    --paper: #f8f4f0;
+    --pink: #ed9c91;
+    --black: #111;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100dvh;
+    margin: 0;
+    color: var(--black);
+    background: #f8f4f0 url("../images/background-info-vertical.png") center top / cover no-repeat;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.invite-page {
+    min-height: 100dvh;
+    width: 100%;
+    padding: clamp(28px, 3.8vw, 58px) 22px clamp(30px, 4vw, 58px);
+}
+
+.invite-content {
+    width: min(100%, 1040px);
+    min-height: calc(100dvh - 70px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-quote {
+    align-self: flex-end;
+    width: min(100%, 410px);
+    margin: 20px 5% 24px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 2vw, 27px);
+    line-height: 1.25;
+    text-align: center;
+}
+
+.hero {
+    width: 100%;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(72px, 10vw, 132px);
+    font-weight: 400;
+    line-height: .82;
+}
+
+.hero p {
+    margin: 10px 0 0;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(62px, 8vw, 105px);
+    line-height: .9;
+}
+
+.message {
+    width: min(100%, 990px);
+    margin-top: clamp(48px, 6vw, 76px);
+    text-align: center;
+}
+
+.message p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(23px, 2.55vw, 36px);
+    line-height: 1.42;
+}
+
+.date-block {
+    width: min(100%, 920px);
+    margin-top: clamp(34px, 4vw, 58px);
+    text-align: center;
+}
+
+.date-block h2 {
+    margin: 0 0 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(46px, 5vw, 70px);
+    font-weight: 400;
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr minmax(150px, 190px) 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+.side-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(25px, 3vw, 39px);
+    white-space: nowrap;
+}
+
+.date-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: .82;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.date-number strong {
+    color: var(--pink);
+    font-size: clamp(100px, 11vw, 160px);
+    font-weight: 400;
+}
+
+.date-number span {
+    margin-top: 10px;
+    font-size: clamp(54px, 6vw, 82px);
+    font-weight: 400;
+}
+
+.location {
+    margin-top: clamp(30px, 3.5vw, 52px);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.location p {
+    margin: 0;
+    font-size: clamp(23px, 2.5vw, 35px);
+    line-height: 1.4;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(42px, 7vw, 90px);
+    margin-top: clamp(28px, 3.5vw, 48px);
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(150px, 18vw, 205px);
+    color: var(--black);
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 2vw, 28px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.action-icon {
+    display: grid;
+    place-items: center;
+    width: clamp(112px, 13vw, 155px);
+    aspect-ratio: 1;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: var(--pink);
+    color: white;
+    font-size: clamp(58px, 7vw, 88px);
+    transition: transform .16s ease, filter .16s ease;
+}
+
+.action:hover .action-icon {
+    transform: translateY(-3px);
+    filter: brightness(.96);
+}
+
+.action:active .action-icon {
+    transform: scale(.96);
+}
+
+.action:focus-visible {
+    outline: 3px solid rgba(237, 156, 145, .8);
+    outline-offset: 7px;
+    border-radius: 10px;
+}
+
+.instruction {
+    margin: clamp(24px, 3vw, 40px) 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 2.2vw, 31px);
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-size: auto 100%;
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+    .invite-page {
+        padding: 25px 14px 30px;
+    }
+
+    .invite-content {
+        min-height: 0;
+    }
+
+    .top-quote {
+        align-self: center;
+        width: min(100%, 320px);
+        margin: 8px 0 28px;
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: clamp(56px, 16vw, 78px);
+        line-height: .86;
+    }
+
+    .hero p {
+        margin-top: 8px;
+        font-size: clamp(50px, 14vw, 70px);
+    }
+
+    .message {
+        margin-top: 40px;
+    }
+
+    .message p {
+        font-size: clamp(17px, 5vw, 21px);
+        line-height: 1.42;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .date-block {
+        margin-top: 30px;
+    }
+
+    .date-block h2 {
+        margin-bottom: 6px;
+        font-size: clamp(37px, 11vw, 50px);
+    }
+
+    .date-row {
+        grid-template-columns: 1fr auto 1fr;
+        column-gap: 7px;
+    }
+
+    .side-info {
+        font-size: clamp(15px, 4.6vw, 20px);
+        white-space: normal;
+        line-height: 1.15;
+    }
+
+    .date-number strong {
+        font-size: clamp(82px, 25vw, 112px);
+    }
+
+    .date-number span {
+        margin-top: 8px;
+        font-size: clamp(39px, 12vw, 53px);
+    }
+
+    .location {
+        margin-top: 27px;
+    }
+
+    .location p {
+        font-size: clamp(17px, 5vw, 21px);
+    }
+
+    .actions {
+        gap: clamp(22px, 8vw, 42px);
+        margin-top: 28px;
+    }
+
+    .action {
+        width: min(42vw, 145px);
+        font-size: clamp(14px, 4.2vw, 18px);
+    }
+
+    .action-icon {
+        width: clamp(82px, 24vw, 105px);
+        margin-bottom: 9px;
+        font-size: clamp(44px, 13vw, 58px);
+    }
+
+    .instruction {
+        margin-top: 24px;
+        font-size: clamp(16px, 4.7vw, 20px);
+    }
+}
+
+@media (max-width: 380px) {
+    .invite-page {
+        padding-inline: 10px;
+    }
+
+    .top-quote {
+        font-size: 15px;
+        margin-bottom: 22px;
+    }
+
+    .message {
+        margin-top: 32px;
+    }
+
+    .message p {
+        font-size: 16px;
+    }
+
+    .date-block {
+        margin-top: 24px;
+    }
+
+    .side-info {
+        font-size: 14px;
+    }
+
+    .date-number strong {
+        font-size: 76px;
+    }
+
+    .date-number span {
+        font-size: 36px;
+    }
+
+    .location p {
+        font-size: 16px;
+    }
+
+    .actions {
+        gap: 18px;
+    }
+
+    .action {
+        font-size: 13px;
+    }
+
+    .action-icon {
+        width: 76px;
+        font-size: 41px;
+    }
+
+    .instruction {
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .action-icon {
+        transition: none;
+    }
+}

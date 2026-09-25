@@ -1,0 +1,44 @@
+/* Página 1 — Envelope */
+* { box-sizing: border-box; }
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    overflow: hidden;
+    background: #f4e5e1 url("../images/carta-horizontal.png") center center / cover no-repeat;
+}
+
+.invitation {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+.ent-conv {
+    position: absolute;
+    inset: 0;
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ent-conv:focus-visible {
+    outline: 3px solid rgba(180, 133, 123, 0.8);
+    outline-offset: -6px;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: url("../images/carta_vertical.png");
+        background-position: center center;
+    }
+}
+
+@media (max-width: 360px) {
+    body { background-position: 50% center; }
+}
